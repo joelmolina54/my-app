@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("../upload/pixelcut-export\ \(3\).jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.activities {
+  width: 45%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+.activities h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.activities p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.activities ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.activities ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.flip-container {
+  perspective: 1000px;
+  width: 45%;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+
+.back {
+  color:#ffffff;
+  transform: rotateY(180deg);
+}
+
+.welcome {
+  color: #ffffff;
+}
+
+.form {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome,
+.login-form {
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: rgba(179, 179, 179, 0.8);
+}
+
+form {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.lbl-nombre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #c7c7c7;
+  transition: all 0.3s ease;
+}
+
+.lbl-nombre:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background-color: #2ece71;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.text-nomb {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+input {
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: none;
+  color: #fff;
+}
+
+input:focus + .lbl-nombre .text-nomb,
+input:valid + .lbl-nombre .text-nomb {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #26752d;
+}
+
+input:focus + .lbl-nombre:after,
+input:valid + .lbl-nombre:after {
+  transform: scaleX(1);
+}
+
+button {
+  background-color: #c70a0a;
+  color: #f1f1f1;
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.6s;
+}
+
+button:hover {
+  background-color: #118a11;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .activities {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .flip-container {
+    width: 90%;
+  }
+}

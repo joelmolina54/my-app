@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  justify-content: center;
+  display: flex;
+  margin: 15px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../upload/WhatsApp\ Image\ 2024-08-13\ at\ 19.24.49.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-bottom: none;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.mensaje_bienvenida {
+  margin-bottom: 20px;
+}
+
+.mensaje_bienvenida h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.mensaje_bienvenida p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-light {
+  color: #333;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn {
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}

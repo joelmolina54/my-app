@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion - Escuala Jipijapa</title>
+    <link rel="icon" href="upload/WhatsApp Image 2024-07-14 at 23.10.40-Photoroom.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="activities">
+            <h2>Actividades Escolares</h2>
+            <p><strong>Deportes y Recreación:</strong></p>
+            <ul>
+                <li><strong>Fútbol:</strong> Entrenamientos y competiciones intercolegiales.</li>
+                <li><strong>Baloncesto:</strong> Desarrollo de habilidades y torneos locales.</li>
+            </ul>
+            <p><strong>Idiomas y Comunicación:</strong></p>
+            <ul>
+                <li><strong>Club de Lectura:</strong> Fomento de la lectura y discusiones literarias.</li>
+                <li><strong>Debate:</strong> Desarrollo de habilidades argumentativas y competencias.</li>
+            </ul>
+            <p><strong>Desarrollo Personal y Social:</strong></p>
+            <ul>
+                <li><strong>Liderazgo:</strong> Talleres y actividades para desarrollar habilidades de liderazgo.</li>
+                <li><strong>Voluntariado:</strong> Proyectos comunitarios y servicios sociales.</li>
+            </ul>
+        </div>
+        <div class="flip-container">
+            <div class="flipper">
+                    <div class="welcome">
+                        <h1>¡Bienvenidos!</h1>
+                        <p>Eres bienvenido. Da click para avanzar y pide ya tu usuario para ver actividades que hacer.</p>
+                        <button id="loginButton" class="btn">Iniciar Sesión</button>
+                        <a href="html/rgpriv_registrar.html">
+                            <button id="registerButton" class="btn">Registrarse</button>
+                        </a>
+                </div>
+                <div class="back">
+                    <div class="login-form">
+                        <form action="login.php" method="POST" class="form">
+                            <h2>Cronograma de actividades</h2>
+                            <div class="input-container">
+                                <input type="text" name="username" required>
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Nombre</span>
+                                </label>
+                            </div>
+                            <div class="input-container">
+                                <input type="password" name="password" required>
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Contraseña</span>
+                                </label>
+                            </div>
+                            <button class="btn" type="submit">Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/informacion_login.js"></script>
+</body>
+</html>
